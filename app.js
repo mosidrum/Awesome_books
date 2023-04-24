@@ -8,6 +8,15 @@ function updateData() {
   localStorage.setItem('Added Books', JSON.stringify(storeData));
 }
 
+function displayBooks() {
+  const listOfBooks = document.querySelector('.container');
+  listOfBooks.innerHTML = `
+    <ul>
+      ${createBook(storeData)}
+    </ul>
+  `;
+}
+
 function addNewData(bookTitle, bookAuthor) {
   const Book = {
     title: bookTitle,
@@ -28,7 +37,7 @@ bookForm.addEventListener('submit', (e) => {
 
 function createBook(arr) {
   let books = '';
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i+= 1) {
     books += `
       <p>${arr[i].title}</p>
       <p>${arr[i].author}</p>
@@ -38,15 +47,6 @@ function createBook(arr) {
   }
   return books;
 }
-
-function displayBooks() {
-  const listOfBooks = document.querySelector('.container');
-  listOfBooks.innerHTML = `
-    <ul>
-      ${createBook(storeData)}
-    </ul>
-  `
-};
 
 function removeBook(i) {
   storeData.splice(i);
