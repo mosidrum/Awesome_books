@@ -3,3 +3,51 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.container .book-holder {
+  display: flex;
+  position: relative;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.book-holder .by {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.book-holder .delete {
+  position: absolute;
+  right: 0.1px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#book-form {
+  margin-top: 30px;
+}
+
+#book-form input {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#book-form .btn {
+  cursor: pointer;
+}

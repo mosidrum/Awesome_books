@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Awesome books</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Awesome Book</title>
 </head>
 <body>
-    <h1 id="book-name">Awesome books</h1>
-    <!-- <div id="book-list"></div> -->
-    <form id="add-book-form">
-      <ul id="book-list"></ul>
-      <input type="text" id="title" name="title" placeholder="Title" required><br><br>
-      <input type="text" id="author" name="author" placeholder="Author" required><br><br>
-      <button type="submit" id="add">Add</button>
+  <div class="main">
+    <h1>All Awesome Books</h1>
+    <div class="container">
+      <!-- Book list goes here -->
+    </div>
+    <form action="#" id="book-form">
+      <input type="text" id="title" placeholder="Book title" required><br><br>
+      <input type="text" id="author" placeholder="Book author" required><br><br>
+      <input class="btn" type="submit" value="Add Book">
     </form>
-    <script src="./app.js" defer></script>
+  </div>
+  <script src="./app.js"></script>
 </body>
 </html>
