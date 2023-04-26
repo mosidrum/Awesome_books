@@ -5,38 +5,6 @@ class Book {
   }
 }
 
-class UI {
-  static displayBooks() {
-    const books = Store.getBooks();
-
-    books.forEach((book) => UI.addBookToList(book));
-  }
-
-  static addBookToList(book) {
-    const list = document.querySelector('.container');
-    const inside = document.createElement('ul');
-    inside.classList = 'book-holder';
-    inside.innerHTML += `
-      <p>${book.title}</p> <p class='by'>by</p> <p>${book.author}</p>
-      <button class="delete">Remove</button>
-     `;
-    list.appendChild(inside);
-  }
-
-  static clear() {
-    var title = document.querySelector('#title').value;
-    var author = document.querySelector('#author').value;
-    title = " ";
-    author = " ";
-  }
-
-  static deleteBook(target) {
-    if (target.classList.contains('delete')) {
-      target.parentElement.remove();
-    }
-  }
-}
-
 class Store {
   static getBooks() {
     let books;
@@ -64,6 +32,38 @@ class Store {
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
+  }
+}
+
+class UI {
+  static displayBooks() {
+    const books = Store.getBooks();
+
+    books.forEach((book) => UI.addBookToList(book));
+  }
+
+  static addBookToList(book) {
+    const list = document.querySelector('.container');
+    const inside = document.createElement('ul');
+    inside.classList = 'book-holder';
+    inside.innerHTML += `
+      <p>${book.title}</p> <p class='by'>by</p> <p>${book.author}</p>
+      <button class="delete">Remove</button>
+     `;
+    list.appendChild(inside);
+  }
+
+  static clear() {
+    let title = document.querySelector('#title').value;
+    let author = document.querySelector('#author').value;
+    title = '';
+    author = '';
+  }
+
+  static deleteBook(target) {
+    if (target.classList.contains('delete')) {
+      target.parentElement.remove();
+    }
   }
 }
 
