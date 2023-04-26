@@ -58,7 +58,6 @@ class UI {
     const author = document.querySelector('#author');
     title.value = '';
     author.value = '';
-
   }
 
   static deleteBook(target) {
