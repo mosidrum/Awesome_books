@@ -52,6 +52,6 @@
   cursor: pointer;
 }
 
-#book-holder:nth-child(odd) {
-  background-color: gray;
+.book-holder:nth-child(even) {
+  background-color: rgb(241, 239, 239);
 }
