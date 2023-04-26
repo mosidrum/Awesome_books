@@ -5,6 +5,3 @@ navlinks.forEach(link =>{
     link.classList.add('active');
   }
 })
-
-const date = document.querySelector('.date');
-date.innerHTML = Date();
