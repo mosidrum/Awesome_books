@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+  min-height: 99vh;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 60vh;
   text-align: center;
+  position: relative;
 }
 
 .container .book-holder {
@@ -22,6 +27,22 @@
   align-items: center;
   margin-bottom: 20px;
   font-size: 20px;
+}
+
+.contact-container {
+  font-size: 20px;
+  margin: 30px 350px;
+  text-align: left;
+}
+
+.contact-container ul {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-container ul li {
+  padding: 10px;
+  font-size: 12px;
 }
 
 .book-holder .by {
@@ -54,4 +75,18 @@
 
 .book-holder:nth-child(even) {
   background-color: rgb(241, 239, 239);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 30px;
+  font-size: 20px;
+  border: 2px solid;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
 }

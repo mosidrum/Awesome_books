@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul li a:is(:link, :active, :visited).active {
+  text-decoration: underline 3px solid rgb(0, 0, 0);
+}
+
+.date {
+  text-align: right;
+  margin-right: 10px;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
